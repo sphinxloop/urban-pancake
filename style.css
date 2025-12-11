@@ -158,6 +158,62 @@ body {
   -webkit-animation-delay: 1.25s;
           animation-delay: 1.25s;
 }
+.mast__title span:nth-child(26) {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+.mast__title span:nth-child(27) {
+  -webkit-animation-delay: 1.35s;
+          animation-delay: 1.35s;
+}
+.mast__title span:nth-child(28) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.mast__title span:nth-child(29) {
+  -webkit-animation-delay: 1.45s;
+          animation-delay: 1.45s;
+}
+.mast__title span:nth-child(30) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.mast__title span:nth-child(31) {
+  -webkit-animation-delay: 1.55s;
+          animation-delay: 1.55s;
+}
+.mast__title span:nth-child(32) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.mast__title span:nth-child(33) {
+  -webkit-animation-delay: 1.65s;
+          animation-delay: 1.65s;
+}
+.mast__title span:nth-child(34) {
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+.mast__title span:nth-child(35) {
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+.mast__title span:nth-child(36) {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.mast__title span:nth-child(37) {
+  -webkit-animation-delay: 1.85s;
+          animation-delay: 1.85s;
+}
+.mast__title span:nth-child(38) {
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+}
+.mast__title span:nth-child(39) {
+  -webkit-animation-delay: 1.95s;
+          animation-delay: 1.95s;
+}
 .mast__text {
   font-family: "Cutive Mono", monospace;
   font-size: 1em;
