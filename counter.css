@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-.counter_wrapper{width:100%;background:#f9f9f9;padding-top:20px;padding-bottom:100px;font-family: 'Poppins', sans-serif;}
+.counter_wrapper{width:100%;background:#ffffff;padding-top:20px;padding-bottom:100px;font-family: 'Poppins', sans-serif;}
 .counter_wrapper .count_box{padding:50px 20px;border:2px solid #dc4225;border-radius:10px;text-align:center}
 .counter_wrapper .count_box h3{font-size:40px;font-weight:600;color:#222;-webkit-transition:all .5s;-o-transition:all .5s;-ms-transition:all .5s;-moz-transition:all .5s;transition:all .5s}
 .counter_wrapper .count_box h4{font-size:15px;font-weight:300;text-transform:uppercase;color:#313131;padding-top:10px;-webkit-transition:all .5s;-o-transition:all .5s;-ms-transition:all .5s;-moz-transition:all .5s;transition:all .5s}
