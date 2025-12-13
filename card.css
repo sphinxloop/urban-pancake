@@ -19,17 +19,17 @@ div.card {
 }
 
 div.card:nth-child(1) {
-  background: #dedede;
-  color: black;
+  background: linear-gradient(135deg, #000000 0%, #434343 100%);
+  color: white;
 }
 
 div.card:nth-child(2) {
-  background: #000;
+  background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
   color: white;
 }
 
 div.card:nth-child(3) {
-  background: #e9a4b3;
+  background: linear-gradient(135deg, #283048 0%, #859398 100%);
   color: white;
 }
 
