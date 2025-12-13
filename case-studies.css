@@ -1,88 +1,169 @@
+/* ===============================
+   LAYOUT
+================================ */
 .case-studies {
   display: flex;
   gap: 16px;
   width: 100%;
-  height: 650px; /* UPDATED */
+  height: 650px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
-
+/* ===============================
+   CASE TILE BASE
+================================ */
 .case-tile {
   flex: 1;
+  position: relative;
   border-radius: 16px;
   padding: 24px;
   cursor: pointer;
-  transition: flex 0.5s ease, background 0.4s ease;
   overflow: hidden;
-  position: relative;
-
   background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
   color: #ffffff;
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    flex 0.5s ease,
+    background 0.4s ease;
 }
-
+/* visible after stagger */
+.case-tile.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===============================
+   IMAGE OVERLAY (COLLAPSED)
+================================ */
 .case-tile::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(2,6,23,0.3),
-    rgba(2,6,23,0.85)
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0)
   );
   z-index: 0;
 }
-
+/* ===============================
+   EXPANDED STATE
+================================ */
 .case-tile.active {
   flex: 3;
   background: #020617;
 }
-
 .case-tile.active::before {
   display: none;
 }
-
+/* keep content above overlays */
 .case-tile * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
-
-/* HEADER */
+/* ===============================
+   GRADIENT BORDER + GLOW (ENHANCED)
+================================ */
+.case-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 20%,
+    #1e3a8a 40%,
+    #ff6b35 50%,
+    #1e3a8a 60%,
+    transparent 80%,
+    transparent 100%
+  );
+  background-size: 400% 400%;
+  box-shadow:
+    0 0 25px rgba(255, 107, 53, 0.7),
+    0 0 45px rgba(30, 58, 138, 0.5);
+  animation: borderChase 15s ease-in-out forwards;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+}
+/* calm glow when expanded */
+.case-tile.active::after {
+  box-shadow:
+    0 0 15px rgba(255, 107, 53, 0.4),
+    0 0 30px rgba(30, 58, 138, 0.3);
+  animation: borderChaseSlow 4s ease-in-out infinite;
+}
+/* ===============================
+   BORDER ANIMATIONS
+================================ */
+/* Initial load - chases once around the border */
+@keyframes borderChase {
+  0% {
+    background-position: 200% 50%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    background-position: -200% 50%;
+    opacity: 1;
+  }
+}
+/* When expanded - continuous subtle movement */
+@keyframes borderChaseSlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+/* ===============================
+   HEADER
+================================ */
 .tile-header {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-
 .brand-title {
   text-align: center;
-  font-size: 30px; /* UPDATED */
+  font-size: 30px;
   letter-spacing: 0.4px;
 }
-
 .meta {
   font-size: 12px;
   color: #94a3b8;
   text-align: center;
 }
-
-/* CONTENT */
+/* ===============================
+   CONTENT
+================================ */
 .tile-content {
   margin-top: 28px;
   opacity: 0;
   max-height: 0;
   transition: opacity 0.3s ease;
 }
-
 .case-tile.active .tile-content {
   opacity: 1;
   max-height: 1200px;
 }
-
 .section {
   margin-bottom: 22px;
 }
-
 .section-title {
   font-size: 12px;
   letter-spacing: 2px;
@@ -90,24 +171,23 @@
   color: #64748b;
   margin-bottom: 10px;
 }
-
 .summary {
   font-size: 14px;
   line-height: 1.7;
   color: #e5e7eb;
 }
-
 .points {
   padding-left: 18px;
 }
-
 .points li {
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 8px;
   color: #cbd5f5;
 }
-
+/* ===============================
+   BUTTON
+================================ */
 .report-btn {
   display: inline-block;
   margin-top: 10px;
@@ -119,23 +199,6 @@
   text-decoration: none;
   transition: background 0.3s ease;
 }
-
 .report-btn:hover {
   background: #1d4ed8;
-}
-.case-tile {
-  opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease,
-    flex 0.5s ease,
-    background 0.4s ease;
-  border: 10px solid rgba(255,255,255,1)
-}
-
-/* when visible */
-.case-tile.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
