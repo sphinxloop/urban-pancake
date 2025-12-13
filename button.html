@@ -1,20 +1,31 @@
-<svg style="position: absolute; width: 0; height: 0;">
-  <filter width="3000%" x="-1000%" height="3000%" y="-1000%" id="unopaq">
-    <feColorMatrix
-      values="1 0 0 0 0 
-            0 1 0 0 0 
-            0 0 1 0 0 
-            0 0 0 3 0"
-    ></feColorMatrix>
-  </filter>
-</svg>
-
-<div class="backdrop"></div>
-<button class="button">
-  <div class="a l"></div>
-  <div class="a r"></div>
-  <div class="a t"></div>
-  <div class="a b"></div>
-  <div class="text">Button</div>
-</button>
-</div><link rel="stylesheet" href="button.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Button</title>
+  <link rel="stylesheet" href="button.css">
+</head>
+<body>
+  <svg style="position: absolute; width: 0; height: 0;">
+    <filter width="3000%" x="-1000%" height="3000%" y="-1000%" id="unopaq">
+      <feColorMatrix
+        values="1 0 0 0 0 
+              0 1 0 0 0 
+              0 0 1 0 0 
+              0 0 0 3 0"
+      ></feColorMatrix>
+    </filter>
+  </svg>
+  
+  <div class="button-container">
+    <a href="https://calendly.com/bridgestag/30min" target="_blank" class="button">
+      <div class="a l"></div>
+      <div class="a r"></div>
+      <div class="a t"></div>
+      <div class="a b"></div>
+      <div class="text">Book a Call</div>
+    </a>
+  </div>
+</body>
+</html>
