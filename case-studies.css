@@ -54,10 +54,16 @@
 ================================ */
 .case-tile.active {
   flex: 3;
-  background: #020617;
+  background: linear-gradient(135deg, #fefce8 0%, #e7e5e4 100%);
 }
 .case-tile.active::before {
   display: none;
+}
+.case-tile.active .brand-title {
+  color: #000000;
+}
+.case-tile.active .meta {
+  color: #000000;
 }
 /* keep content above overlays */
 .case-tile * {
@@ -142,10 +148,11 @@
   text-align: center;
   font-size: 30px;
   letter-spacing: 0.4px;
+  color: #ffffff;
 }
 .meta {
   font-size: 12px;
-  color: #94a3b8;
+  color: #ffffff;
   text-align: center;
 }
 /* ===============================
@@ -165,25 +172,25 @@
   margin-bottom: 22px;
 }
 .section-title {
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #64748b;
+  color: #57534e;
   margin-bottom: 10px;
 }
 .summary {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
-  color: #e5e7eb;
+  color: #000000;
 }
 .points {
   padding-left: 18px;
 }
 .points li {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 8px;
-  color: #cbd5f5;
+  color: #000000;
 }
 /* ===============================
    BUTTON
@@ -193,12 +200,12 @@
   margin-top: 10px;
   padding: 10px 18px;
   border-radius: 8px;
-  background: #2563eb;
-  color: #ffffff;
-  font-size: 13px;
+  background: #ff7a1a;
+  color: #000000;
+  font-size: 14px;
   text-decoration: none;
   transition: background 0.3s ease;
 }
 .report-btn:hover {
-  background: #1d4ed8;
+  background: #ff8a2a;
 }
