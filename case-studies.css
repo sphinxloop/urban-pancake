@@ -131,7 +131,7 @@
     transform 0.6s ease,
     flex 0.5s ease,
     background 0.4s ease;
-  border: 1px solid rgba(255,255,255,1)
+  border: 10px solid rgba(255,255,255,1)
 }
 
 /* when visible */
